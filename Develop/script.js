@@ -1,9 +1,5 @@
 // Assignment code here
-var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numericChars = "0123456789";
-var specialChars = " !@#$%^&*()-_=+[]{}|;:,.<>?";
-var passwordLength = ">= 8 && <= 128"
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -14,25 +10,20 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// Function to generate a random password
 function generatePassword() {
   // Define character sets for each type
-  var lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
-  var uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var numericChars = '0123456789';
-  var specialChars = '!@#$%^&*()-_=+[]{}|;:,.<>?';
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz" ;
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
+  var numericChars = "0123456789" ;
+  var specialChars = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~" ;
 
   // Prompt for password length
   var passwordLength = window.prompt('Enter the password length (between 8 and 128 characters):');
 
   // Validate the password length
-  if (!passwordLength >= 8 && !passwordLength <= 128) {
+  if (!(passwordLength >= 8 && passwordLength <= 128)) {
     alert('Invalid input. Enter a valid password length (between 8 and 128 characters).');
     return;
   }
@@ -69,3 +60,6 @@ function generatePassword() {
   // Return the generated password
   return password;
 }
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
