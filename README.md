@@ -1,5 +1,5 @@
 # Password Generator Starter Code
-Generate another example without "const", "let", "parseInt", "while" , "isNan" with the following criteria
+
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
